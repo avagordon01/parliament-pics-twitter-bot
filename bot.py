@@ -7,11 +7,12 @@ import time
 
 
 import twitter
+import config
 api = twitter.Api(
-    consumer_key='LcYC92wtyaEUmAJrn9DGpiMv9',
-    consumer_secret='kySXUeSJvcUuBWGibPItZL4GWwUypkfF4bm6fJ5w5u6o5C4UqU',
-    access_token_key='888817867612971008-akD3ufr4QLhQCGUmpNv4qD3WdbGQcUZ',
-    access_token_secret='EuiJrj9L3pcEBQ4DQKVk1xwtklkttlT9AavUgM1Lay9NO'
+    consumer_key=config.consumer_key,
+    consumer_secret=config.consumer_secret,
+    access_token_key=config.access_token_key,
+    access_token_secret=config.access_token_secret
 )
 api.VerifyCredentials()
 #api.PostMedia('status', 'filename.png')
