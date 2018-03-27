@@ -11,6 +11,10 @@ api.VerifyCredentials()
 from glob import glob
 from time import sleep
 from os import remove
+
+files = sorted(glob('out/*'))
+for file in files:
+    remove(file)
 while True:
     files = sorted(glob('out/*'))
     try:
@@ -20,4 +24,4 @@ while True:
             remove(file)
     except IndexError:
         pass
-    sleep(20)
+    sleep(120)
